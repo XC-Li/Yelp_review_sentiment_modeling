@@ -1,8 +1,8 @@
 # NLP_Final_Project
 Final Project for Natural Language Processing@ GWU Fall 2018 
 
-Project ideas"
-1. Lyrics sentiment analysis
+Project ideas:
+1. Lyrics sentiment analysis<br>
 Here are two references:
 https://github.com/darenasc/lyrics-sentiment-analysis/blob/master/lyrics.ipynb
 http://michaeljohns.github.io/lyrics-lab/#
