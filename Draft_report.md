@@ -6,7 +6,7 @@
 ## Abstract
 
 ## Data Source and Preprocessing
-Yelp data
+We chose the Yelp data set from 
 
 ## Natural Language Processing
 
