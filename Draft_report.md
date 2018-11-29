@@ -26,10 +26,15 @@ Another interesting topic is whether the sentiment model on one subcategory(eg. 
 We will train and test specialized NLP model cross subcategories to find out.
 
 ### Exploratory Data Analysis
+This part may include aspects such as descriptive statistics and exploratory plots for the understanding of the data structure and data quality.
 
 ### NLP modeling on the whole review data
+We will try a few models to predict the number of stars of a review using the sentences/words contained in the review. The different NLP techniques will distinguish the models.
 
 ### NLP modeling cross different subcategories
+One of the interesting topics here is to use NLP techniques (e.g. tf-idf) to examine the key words in negative reviews and positive reviews, and also compare these across different cuisines.
+
+Another interesting aspect is to train one or more models presented in the previous section on only a subset (e.g. American food) of reviews and evaluate its performance against other subsets (e.g. Chinese food). 
 
 ## Finding and Conclusion 
 We will summarize the findings and try to explain the findings and get the final conclusion.
