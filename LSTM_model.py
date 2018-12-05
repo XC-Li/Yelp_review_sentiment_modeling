@@ -37,12 +37,17 @@ model.add(Dropout(0.05))
 model.add(Dense(5, activation="softmax"))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['categorical_accuracy'])
 
+log_name = 'lstm'
+
+from tensorflow.keras.callbacks import TensorBoard
+import time
+tb = TensorBoard(log_dir="logs/" + log_name +" "+ time.ctime())
 batch_size = 1000
-epochs = 2
-history = model.fit(X_t,y_train, batch_size=batch_size, epochs=epochs,validation_split=0.1)
+epochs = 20
+history = model.fit(X_t,y_train, batch_size=batch_size, epochs=epochs,validation_split=0.1,callbacks=[tb])
 model.save("LSTM_model.h5")
 
-log_name = 'lstm'
+
 
 import numpy as np
 import time
@@ -54,7 +59,7 @@ def plot(history, log_name, num_epoch):
              np.array(history.history["val_categorical_accuracy"]), label='Validation Accuracy', color='r')
     plt.legend()
     plt.title("Accuracy" + log_name + time.ctime())
-    plt.savefig("./imgs/Accuracy " + log_name + " " + time.ctime())
+    plt.savefig("./image/Accuracy " + log_name + " " + time.ctime())
     # plt.show()
     plt.close()
     plt.plot(np.linspace(1, num_epoch, num_epoch), np.array(history.history["loss"]), label='Loss', color='b')
@@ -62,7 +67,7 @@ def plot(history, log_name, num_epoch):
              np.array(history.history["val_loss"]), label='Validation Loss', color='r')
     plt.legend()
     plt.title("Loss" + log_name + time.ctime())
-    plt.savefig("./imgs/Loss " + log_name + " " + time.ctime())
+    plt.savefig("./image/Loss " + log_name + " " + time.ctime())
     # plt.show()
     plt.close()
 
