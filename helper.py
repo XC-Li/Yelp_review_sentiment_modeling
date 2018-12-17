@@ -1,6 +1,6 @@
 """
 Helper Program for Yelp Project
-Author: Xiaochi(George) Li
+Author: Xiaochi(George) Li 
 """
 
 from tqdm import tqdm
